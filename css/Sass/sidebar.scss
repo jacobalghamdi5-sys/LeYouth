@@ -1,12 +1,46 @@
+// LeYouth Studio - Sidebar Component Stylesheet (SCSS)
+
 .sidebar-panel {
   background: #16181f;
-
-  .preset-card {
-    position: relative;
+  
+  // Nested Custom Selector Styling
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    transition: border-color 0.2s ease;
 
     &:hover {
-      box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
-      transform: translateY(-2px);
+      border-color: #4b5563;
     }
   }
+
+  // Nested Style Preset Cards Layout
+  .preset-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.3);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    // Active Selection State Variant
+    &.border-white {
+      animation: pulse-border 2s infinite ease-in-out;
+      box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: rgba(255, 255, 255, 1); }
+  50% { border-color: rgba(255, 255, 255, 0.4); }
 }
