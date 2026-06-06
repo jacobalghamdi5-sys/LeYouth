@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (): void => {
 
     let activePreset: string | null = null;
 
-    // Handle clicks on style presets safely
+    // Handle clicks on style presets safely without any emoji components
     presetButtons.forEach((btn: HTMLButtonElement) => {
         btn.addEventListener("click", (): void => {
             const presetKey = btn.getAttribute("data-preset");
