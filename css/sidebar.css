@@ -1,0 +1,69 @@
+/* ==========================================================================
+   LEYOUTH STUDIO - SIDEBAR COMPONENT THEMES
+   ========================================================================== */
+
+/* 1. SIDEBAR CONTAINER GRAPHICS */
+aside {
+  background-color: var(--bg-surface, #16181f);
+  box-shadow: 4px 0 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* 2. DROPDOWN CONTROLS (MODEL SELECTOR) */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px !important;
+  transition: all 0.2s ease;
+}
+
+select:hover {
+  border-color: #4b5563;
+}
+
+select:focus {
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+/* 3. VISUAL PRESET CARDS INTERACTIVE GRID */
+.preset-card {
+  position: relative;
+  overflow: hidden;
+  background-size: 120% 120%;
+  background-position: 0% 0%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add a glowing neon hover aura effect to the style preset cards */
+.preset-card:hover {
+  box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+  background-position: 100% 100%;
+}
+
+.preset-card:active {
+  transform: translateY(1px);
+}
+
+/* Custom interactive ring styling when a style is locked active */
+.preset-card.border-white {
+  animation: pulse-border 2s infinite ease-in-out;
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: rgba(255, 255, 255, 1); }
+  50% { border-color: rgba(255, 255, 255, 0.4); }
+}
+
+/* 4. UTILITY ITEMS */
+#modelDescBox {
+  animation: fade-in-desc 0.25s ease-out;
+}
+
+@keyframes fade-in-desc {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
