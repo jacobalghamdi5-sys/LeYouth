@@ -38,6 +38,24 @@
         </div>
 
         <div class="space-y-2">
+          <label class="text-xs text-gray-500 font-medium">Style Presets</label>
+          <div class="grid grid-cols-2 gap-2 text-xs" id="presetGrid">
+            <button data-preset="cyberpunk" class="preset-card p-3 bg-gradient-to-br from-pink-600 to-purple-900 border-2 border-transparent text-white font-bold rounded-xl text-left transition hover:scale-[1.02] active:scale-[0.98]">
+              Cyberpunk
+            </button>
+            <button data-preset="anime" class="preset-card p-3 bg-gradient-to-br from-blue-400 to-indigo-700 border-2 border-transparent text-white font-bold rounded-xl text-left transition hover:scale-[1.02] active:scale-[0.98]">
+              Anime Cel
+            </button>
+            <button data-preset="photoreal" class="preset-card p-3 bg-gradient-to-br from-amber-600 to-stone-900 border-2 border-transparent text-white font-bold rounded-xl text-left transition hover:scale-[1.02] active:scale-[0.98]">
+              Photoreal
+            </button>
+            <button data-preset="clay3d" class="preset-card p-3 bg-gradient-to-br from-green-400 to-teal-800 border-2 border-transparent text-white font-bold rounded-xl text-left transition hover:scale-[1.02] active:scale-[0.98]">
+              3D Clay
+            </button>
+          </div>
+        </div>
+
+        <div class="space-y-2">
           <label class="text-xs text-gray-500 font-medium">Aspect Ratio</label>
           <div class="grid grid-cols-3 gap-2 text-center text-xs">
             <div class="p-2 bg-[#222531] border border-purple-500 text-white rounded-lg cursor-pointer font-medium">16:9</div>
@@ -94,8 +112,8 @@
   </main>
 
   <script src="js/models.js"></script>
+  <script src="js/presets.js"></script>
   <script src="js/canvas.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/presets.js"></script>
 </body>
 </html>
