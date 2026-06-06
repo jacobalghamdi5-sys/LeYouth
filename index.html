@@ -7,11 +7,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/canvas.css">
 </head>
 <body class="bg-[#0d0e12] text-gray-200 google-sans antialiased h-screen flex overflow-hidden">
 
-  <aside class="w-80 bg-[#16181f] border-r border-gray-800 flex flex-col justify-between p-6 overflow-y-auto">
+  <aside class="w-80 bg-[#16181f] border-r border-gray-800 flex flex-col justify-between p-6 overflow-y-auto sidebar-panel">
     <div class="space-y-8">
       
       <div class="flex items-center gap-3">
@@ -28,10 +27,10 @@
         <div class="space-y-2">
           <label class="text-xs text-gray-500 font-medium">Generation Model</label>
           <select id="modelSelect" class="w-full bg-[#1c1e27] border border-gray-700 text-sm text-white rounded-xl p-3 focus:outline-none focus:border-purple-500 font-medium cursor-pointer">
-            <option value="lucid">✨ Lucid Origin</option>
-            <option value="phoenix">🔥 Phoenix 1.0</option>
-            <option value="veo">🎬 Veo 3</option>
-            <option value="banana">🍌 Nano Banana Pro</option>
+            <option value="lucid">Lucid Origin</option>
+            <option value="phoenix">Phoenix 1.0</option>
+            <option value="veo">Veo 3</option>
+            <option value="banana">Nano Banana Pro</option>
           </select>
         </div>
 
@@ -81,7 +80,7 @@
   <main class="flex-1 flex flex-col bg-[#0d0e12]">
     
     <header class="h-16 border-b border-gray-800 px-8 flex items-center justify-between bg-[#12131a]/60 backdrop-blur-md">
-      <div class="text-xs text-gray-400">⚡ System Latency: <span class="text-green-400 font-bold">0ms (Local)</span></div>
+      <div class="text-xs text-gray-400">System Latency: <span class="text-green-400 font-bold">0ms (Local)</span></div>
       <div class="text-xs text-gray-400">Environment: <span class="text-white font-medium">leyouth.js.org</span></div>
     </header>
 
@@ -91,7 +90,7 @@
         <input 
           id="promptInput"
           type="text" 
-          placeholder="Describe your creative vision... (e.g., 'A futuristic cyberpunk city at neon dusk')" 
+          placeholder="Describe your creative vision..." 
           class="flex-1 bg-[#1c1e27] text-white px-5 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-blue-500 placeholder-gray-500 font-medium transition text-sm"
         >
         <button id="generateBtn" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:opacity-90 transition text-sm tracking-wide shadow-lg shadow-purple-500/10">
@@ -99,23 +98,4 @@
         </button>
       </div>
 
-      <section class="space-y-4">
-        <h2 class="text-sm font-bold tracking-wider uppercase text-gray-500">Studio Workspace Output</h2>
-        <div class="aspect-video w-full rounded-2xl border-2 border-dashed border-gray-800 flex flex-col items-center justify-center text-center bg-[#12131a]/40 p-6 relative overflow-hidden">
-          <canvas id="realtimeCanvas" class="absolute inset-0 w-full h-full hidden"></canvas>
-          <div id="canvasPlaceholder" class="space-y-2 pointer-events-none">
-            <p class="text-sm font-bold text-white brand-font">READY TO RENDER</p>
-            <p class="text-xs text-gray-500 max-w-xs mx-auto">Your generated artwork and creative vectors will populate inside this viewport framework.</p>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <script src="js/models.js"></script>
-  <script src="js/presets.js"></script>
-  <script src="js/canvas.js"></script>
-  <script src="js/app.js"></script>
-</body>
-</html>
+      <section class="space-y-
